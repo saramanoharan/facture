@@ -1,0 +1,11 @@
+table{
+	border-radius: 10px;
+	border: solid 0px orangered;
+	margin: auto;
+}
+td{
+	border: solid 2px orange;
+}
+.haut{
+	border: solid 2px green;
+}

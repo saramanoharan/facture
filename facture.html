@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="facture.css">
+	<meta charset="utf-8">
+	<title>Facture</title>
+	<script type="text/javascript" src="facture.js"></script>
+</head>
+<body>
+	<table>
+		<tr class="haut">
+			<td class="haut">Description</td>
+			<td class="haut">Quantité</td>
+			<td class="haut">Prix unitaire </td>
+			<td class="haut">Total</td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne1a" type="text" name="ligne1a"></td>
+			<td><input id="ligne1b" type="text" name="ligne1b"></td>
+			<td><input id="ligne1c" type="text" name="ligne1c"></td>
+			<td><input id="ligne1d" type="text" name="ligne1d"></td>
+
+		</tr>
+
+		<tr>
+			<td><input id="ligne2a" type="text" name="ligne2a"></td>
+			<td><input id="ligne2b" type="text" name="ligne2b"></td>
+			<td><input id="ligne2c" type="text" name="ligne2c"></td>
+			<td><input id="ligne2d" type="text" name="ligne2d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne3a" type="text" name="ligne3a"></td>
+			<td><input id="ligne3b" type="text" name="ligne3b"></td>
+			<td><input id="ligne3c" type="text" name="ligne3c"></td>
+			<td><input id="ligne3d" type="text" name="ligne3d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne4a" type="text" name="ligne4a"></td>
+			<td><input id="ligne4b" type="text" name="ligne4b"></td>
+			<td><input id="ligne4c" type="text" name="ligne4c"></td>
+			<td><input id="ligne4d" type="text" name="ligne4d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne5a" type="text" name="ligne5a"></td>
+			<td><input id="ligne5b" type="text" name="ligne5b"></td>
+			<td><input id="ligne5c" type="text" name="ligne5c"></td>
+			<td><input id="ligne5d" type="text" name="ligne5d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne6a" type="text" name="ligne6a"></td>
+			<td><input id="ligne6b" type="text" name="ligne6b"></td>
+			<td><input id="ligne6c" type="text" name="ligne6c"></td>
+			<td><input id="ligne6d" type="text" name="ligne6d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne7a" type="text" name="ligne7a"></td>
+			<td><input id="ligne7b" type="text" name="ligne7b"></td>
+			<td><input id="ligne7c" type="text" name="ligne7c"></td>
+			<td><input id="ligne7d" type="text" name="ligne7d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne8a" type="text" name="ligne8a"></td>
+			<td><input id="ligne8b" type="text" name="ligne8b"></td>
+			<td><input id="ligne8c" type="text" name="ligne8c"></td>
+			<td><input id="ligne8d" type="text" name="ligne8d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne9a" type="text" name="ligne9a"></td>
+			<td><input id="ligne9b" type="text" name="ligne9b"></td>
+			<td><input id="ligne9c" type="text" name="ligne9c"></td>
+			<td><input id="ligne9d" type="text" name="ligne9d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne10a" type="text" name="ligne10a"></td>
+			<td><input id="ligne10b" type="text" name="ligne10b"></td>
+			<td><input id="ligne10c" type="text" name="ligne10c"></td>
+			<td><input id="ligne10d" type="text" name="ligne10d"></td>
+		</tr>
+
+		<tr>
+			<td><input id="ligne11a" type="text" name="ligne11a"></td>
+			<td><input id="ligne11b" type="text" name="ligne11b"></td>
+			<td><input id="ligne11c" type="text" name="ligne11c"></td>
+			<td><input id="ligne11d" type="text" name="ligne11d"></td>
+		</tr>
+	</table>
+	
+	<input align="right" onClick="calculate()" type="button" value="total">
+	<input id="totaux" type="text" name="totaux"><br>
+	
+	<table class="petit">
+		<tr>
+			Remarques, notes et instructions de paiement :
+			<td width="540px">Sous-Total</td>
+			<td width="80px"><input type="text" name="sous-total" id="sous_toto" class="input" value="0.00"></td>
+		</tr>
+
+		<tr>
+			<td>Remise</td>
+			<td><input type="text" name="remise" id="remise" class="input" value="0.00"></td>
+		</tr>
+		<tr>
+			<td>Sous-Total moins les Remises</td>
+			<td><input type="text" name="sous_remise" id="sous_toto_remise" value="0.00" readonly="readonly"></td>
+		</tr>
+		<tr>
+			<td>Taux d'imposition</td>
+			<td><input type="text" name="taux_impots" id="tauximpots" class="input" value="0.00%"></td>
+		</tr>
+		<tr>
+			<td>Taxe Total</td>
+			<td><input type="text" name="taxe_total" id="totaltaxe" value="0.00" readonly="readonly"></td>
+		</tr>
+		<tr>
+			<td>Expédition, Manutension</td>
+			<td><input type="text" name="exp_man" id="expmanu" class="input" value="0.00"></td>
+		</tr>
+	</table>
+
+	<table width="95%" style="margin: 0 auto;" cellspacing="0" align="right">
+					<tr>
+						<td width="140px" style="border-top: 1px solid black; font-size: 16px;">Solde </td>
+						<td style="background-color: lightpink; border-top: 1px solid black;" width="80px"><input type="text" name="solde" id="solde" value="0.00€" readonly="readonly"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td style="background-color: yellow; border-top: 1px solid black">‎ㅤ</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<input type="button" value="Calculer" onclick="calculate()">
+        <input type="reset" value="Annuler">
+		<input type="button" value="Code Source" onclick="access()">
+
+
+
+</body>
+</html>
+
+
+
